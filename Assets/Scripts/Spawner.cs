@@ -18,7 +18,7 @@ public class Spawner : MonoBehaviour
     /// <summary>
     /// Mean frequency of spawning as n per second.
     /// </summary>
-    public float spawnFrequencyMean = 1.0f;
+    public float spawnFrequencyMean = 5.0f;
     
     /// <summary>
     /// Standard deviation of the frequency of spawning as n per second.
@@ -86,7 +86,6 @@ public class Spawner : MonoBehaviour
     {
         // Spawn the obstacle.
         var obstacle = Instantiate(obstaclePrefab, transform);
-
         // Move it to the target location.
         var spawnDown = RandomBool();
         obstacle.transform.position += (Vector3)(spawnDown ? 
